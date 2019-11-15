@@ -1,61 +1,14 @@
 <template>
   <div id="app">
-    <header id="header" class="fixed w-full z-10 top-0 bg-white border-b border-gray-400">
-      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4">
-        <div class="pl-4 flex items-center">
-            <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"  href="#">
-              ST
-            </a>
-        </div>
-        <div class="pl-4 flex items-center">
-            <a class="text-gray-900 text-base no-underline hover:no-underline"  href="#">
-              ST
-            </a>
-        </div>
-      </div>
-    </header>
-    <nav class="w-full container flex flex-wrap border-b border-gray-400">
+    <router-view/>
 
-    </nav>
-    <!--Container-->
-    <div class="w-full container flex flex-wrap mx-auto px-2 pl-0 pt-20 mt-2">
-      <nav class="w-full flex justify-between">
-        <div class="pl-4 flex items-center">
-          <ul class="flex">
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Does</a>
-            </li>
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">My</a>
-            </li>
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">CI</a>
-            </li>
-          </ul>
-        </div>
-        <div class="pl-4 flex items-center">
-          <ul class="flex">
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Work?</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="w-full container flex flex-wrap mx-auto pt-6">
-      <div class="w-full bg-gray-200 p-4 text-gray-800">
-        <vue-markdown>i am a ~~tast~~ **test**.</vue-markdown>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown';
 
 export default {
   name: 'app',
-  components: { VueMarkdown },
   data: () => ({
     selected: 1
   }),
