@@ -2,7 +2,7 @@
     <div
         class="text-gray-800 text-base no-underline hover:no-underline font-extrathin text-xs"
         :style="{ backgroundImage: avatarUrl }">
-        <icon-user/>
+        <icon-user @click="logout"/>
     </div>
 </template>
 <script>
