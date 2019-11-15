@@ -23,20 +23,20 @@
         <div class="pl-4 flex items-center">
           <ul class="flex">
             <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Timeline</a>
+              <a class="text-blue-500 hover:text-blue-800" href="#">Does</a>
             </li>
             <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Photos</a>
+              <a class="text-blue-500 hover:text-blue-800" href="#">My</a>
             </li>
             <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Friends</a>
+              <a class="text-blue-500 hover:text-blue-800" href="#">CI</a>
             </li>
           </ul>
         </div>
         <div class="pl-4 flex items-center">
           <ul class="flex">
             <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="#">Work</a>
+              <a class="text-blue-500 hover:text-blue-800" href="#">Work?</a>
             </li>
           </ul>
         </div>
