@@ -19,24 +19,27 @@
     </nav>
     <!--Container-->
     <div class="w-full container flex flex-wrap mx-auto px-2 pl-0 pt-20 mt-2">
-      <nav>
-        <ul class="flex">
-          <li class="mr-6">
-            <a class="text-blue-500 hover:text-blue-800" href="#">Home</a>
-          </li>
-          <li class="mr-6">
-            <a class="text-blue-500 hover:text-blue-800" href="#">Timeline</a>
-          </li>
-          <li class="mr-6">
-            <a class="text-blue-500 hover:text-blue-800" href="#">Photos</a>
-          </li>
-          <li class="mr-6">
-            <a class="text-blue-500 hover:text-blue-800" href="#">Friends</a>
-          </li>
-          <li class="mr-6">
-            <a class="text-blue-500 hover:text-blue-800" href="#">Business</a>
-          </li>
-        </ul>
+      <nav class="w-full flex justify-between">
+        <div class="pl-4 flex items-center">
+          <ul class="flex">
+            <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="#">Timeline</a>
+            </li>
+            <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="#">Photos</a>
+            </li>
+            <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="#">Friends</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pl-4 flex items-center">
+          <ul class="flex">
+            <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="#">Work</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
     <div class="w-full container flex flex-wrap mx-auto pt-6">
