@@ -1,11 +1,11 @@
 <template>
     <div class="dashboard">
-        <!-- <h3>Sheets</h3>
+        <h3>Sheets</h3>
         <ul class="sheets-list">
             <li v-for="(sheet, i) in sheets" :key="`${sheet.slug}${i}`">
                 <router-link :to="`sheet/${sheet.slug}`">{{ sheet.title }}</router-link>
             </li>
-        </ul> -->
+        </ul>
     </div>
 </template>
 <script>

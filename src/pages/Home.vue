@@ -43,4 +43,10 @@ export default {
 </script>
 <style lang="scss">
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .05s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>
