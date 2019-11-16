@@ -1,9 +1,8 @@
 <template>
     <div class="dashboard">
-        <h3>Sheets</h3>
-        <ul class="sheets-list">
-            <li v-for="(sheet, i) in sheets" :key="`${sheet.slug}${i}`">
-                <router-link :to="`sheet/${sheet.slug}`">{{ sheet.title }}</router-link>
+        <ul class="chunks-list">
+            <li v-for="(chunk, i) in chunks" :key="`${chunk.slug}${i}`">
+                <router-link :to="`chunk/${chunk.slug}`">{{ chunk.title }}</router-link>
             </li>
         </ul>
     </div>
@@ -11,32 +10,14 @@
 <script>
 export default {
     data: () => ({
-        sheets: [],
+        chunks: [],
     }),
     async mounted() {
-        const sheets = await this.$database.ref('sheet').once('value');
-        this.sheets = sheets.val();
+        const chunks = await this.$database.ref('chunk').once('value');
+        this.chunks = chunks.val();
     },
 }
 </script>
 <style lang="scss">
-.dashboard {
-    padding: 10px;
-}
-.sheets-list {
-    list-style-type: none;
-    padding: 0;
-    li {
-        display: block;
-        border: 1px solid #eee;
-        border-radius: 5px;
-        padding: 10px 15px;
-        margin: 5px auto;
 
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-    }
-}
 </style>

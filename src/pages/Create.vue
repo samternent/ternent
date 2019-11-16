@@ -5,9 +5,8 @@
         </section>
         <section class="create__content">
             <input class="title" type="text" placeholder="Title" v-model.trim="title"/>
-            <ckeditor :editor="editor" v-model="content"></ckeditor>
+            <ckeditor :editor="editor" v-model="info"></ckeditor>
         </section>
-        <button class="btn" @click="save">Save</button>
     </div>
 </template>
 <script>
@@ -18,25 +17,40 @@ export default {
     data: () => ({
         title: '',
         editor: Editor,
-        content: '',
+        info: '',
+        tasks: {},
     }),
     computed: {
         slug: (vm) => vm.title.replace(/\s/g, "-").replace(/[^a-zA-Z0-9 -]/g, "").toLowerCase(),
         url: (vm) => `${window.location.origin}/sheet/${vm.slug}`,
     },
     methods: {
-        async save() {
-            const { slug, title, content } = this;
-            const nextRef = this.$database.ref('sheet').push();
+        async createTask() {
+            const nextRef = this.$database.ref('task').push();
             await nextRef.set({
-                slug,
-                title,
-                content,
+                completed: false,
+                completed_at: '',
+                info: "Holding a toy spider will help you",
+                name: "Hold a toy spider",
                 created_at: Math.floor(Date.now() / 1000),
                 created_by: firebase.auth().currentUser.email,
                 userId: firebase.auth().currentUser.uid,
             });
-            this.$router.replace(`sheet/${slug}`);
+            this.tasks[nextRef.ref.key] = true;
+        },
+        async save() {
+            const { slug, title, info, tasks } = this;
+            const nextRef = this.$database.ref('chunk').push();
+            await nextRef.set({
+                slug,
+                title,
+                info,
+                created_at: Math.floor(Date.now() / 1000),
+                created_by: firebase.auth().currentUser.email,
+                userId: firebase.auth().currentUser.uid,
+                tasks,
+            });
+            // this.$router.replace(`sheet/${slug}`);
         }
     },
 }

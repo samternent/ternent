@@ -10,7 +10,7 @@ const Signup = () => import('../pages/Signup.vue');
 const Home = () => import('../pages/Home.vue');
 const Create = () => import('../pages/Create.vue');
 // const NewGame = () => import('../pages/NewGame.vue');
-// const Sheet = () => import('../pages/Sheet.vue');
+const Chunk = () => import('../pages/Chunk.vue');
 // const Play = () => import('../pages/Play.vue');
 // const Table = () => import('../pages/Table.vue');
 
@@ -39,9 +39,23 @@ export const routes = [
                 component: Dashboard,
             },
             {
-                name: '/create',
+                name: 'create',
                 path: '/create',
                 component: Create,
+            },
+            {
+                name: 'chunk',
+                path: '/chunk/:slug',
+                component: Chunk,
+                children: [
+                    {
+                        name: '/create',
+                        path: ':id',
+                        component: {
+                            render: ()=> {}
+                        },
+                    },
+                ],
             },
             {
                 path: '*',

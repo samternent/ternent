@@ -3,26 +3,24 @@
         <app-header :nav="nav"/>
         <div class="w-full container flex flex-wrap mx-auto px-2 pl-0 pt-16 mt-5">
             <nav class="w-full flex justify-between">
-                <div class="pl-4 flex items-center">
-                <ul class="flex">
-                    <li class="mr-6">
-                        <router-link class="text-blue-500 hover:text-blue-800" to="create">Create</router-link>
-                    </li>
-                </ul>
-                </div>
-                <div class="pl-4 flex items-center">
-                <ul class="flex">
-                    <li class="mr-6">
-                    <a class="text-blue-500 hover:text-blue-800" href="#">Work?</a>
-                    </li>
-                </ul>
-                </div>
+                <!-- <div class="pl-4 flex items-center">
+                    <ul class="flex">
+                        <li class="mr-6">
+                            <router-link class="text-blue-500 hover:text-blue-800" to="create">Create</router-link>
+                        </li>
+                    </ul>
+                </div> -->
+                <!-- <div class="pl-4 flex items-center">
+                    <ul class="flex">
+                        <li class="mr-6">
+                        <a class="text-blue-500 hover:text-blue-800" href="#">Work?</a>
+                        </li>
+                    </ul>
+                </div> -->
             </nav>
             <div class="w-full container flex flex-wrap mx-auto pt-6">
             <div class="w-full bg-gray-200 p-4 text-gray-800">
-                <transition name="fade" mode="out-in">
-                    <router-view/>
-                </transition>
+                <router-view/>
             </div>
         </div>
         </div>
@@ -43,10 +41,4 @@ export default {
 </script>
 <style lang="scss">
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .05s ease;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
 </style>
